@@ -1,7 +1,7 @@
 FROM php:7-alpine
 MAINTAINER Gavin <acabin@live.com>
 
-RUN apk add pcre-devel
+RUN apk add pcre-dev
 RUN apk add --no-cache --virtual .phpize-deps $PHPIZE_DEPS linux-headers && \
     #docker-php-ext-install json xml pdo phar opcache pdo_mysql zip iconv mcrypt bcmath dom pcntl pdo_sqlite
     pecl install swoole && \
